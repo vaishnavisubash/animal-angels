@@ -60,7 +60,7 @@ Feel free to fork this repository, make improvements, and submit pull requests. 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License 
 
 ## Acknowledgments
 
@@ -70,4 +70,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ### Contact
-If you have any questions, suggestions, or would like to collaborate, feel free to reach out via GitHub issues or by emailing me at [your-email@example.com].
+If you have any questions, suggestions, or would like to collaborate, feel free to reach out via GitHub issues or by emailing me at [vaishnavisubash23@gmail.com].
