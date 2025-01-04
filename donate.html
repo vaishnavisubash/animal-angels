@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Animal Angels</title>
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333; /* Default font color */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        header {
+            background: url('https://www.huha.org.nz/media/2000/2000/huha-foot-prints-final') no-repeat center center/cover;
+            color: #fff; /* Font color for header */
+            text-align: center;
+            padding: 60px 20px;
+            height: 30vh;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header .tagline {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #e0f7fa;
+            color: #333; /* Font color for section */
+            position: relative;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #e0f7fa;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            color: #333; /* Ensure text is black */
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .donate-form,
+        .donate-info {
+            background: transparent; /* Make background transparent */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+            color: #333; /* Font color for form and info */
+        }
+
+        .donate-info {
+            background: rgb(135, 206, 235); /* Light blue background with slight opacity */
+        }
+
+        .donate-form input,
+        .donate-form textarea,
+        .donate-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .donate-form .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-form .btn:hover {
+            background-color: #555;
+        }
+
+        .feedback {
+            font-size: 1em;
+            color: red;
+            margin-top: 10px;
+        }
+
+        .thank-you-message {
+            display: none;
+            font-size: 1.2em;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Animal Angels</h1>
+            <p class="tagline">Dedicated to Rescuing and Caring for Animals in Need</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="donate">
+        <div class="container">
+            <h2><i>Donate Now</i></h2>
+            <p>Your generous contributions help us provide care, shelter, and medical treatment for animals in need. Thank you for your support!</p>
+            
+            <div class="donate-info">
+                <h3>Donation Options</h3>
+                <p>We offer several ways to donate, including one-time gifts, monthly contributions, and even sponsorships. Choose the option that best suits you:</p>
+                <ul>
+                    <li>One-time Donation</li>
+                    <li>Monthly Contribution</li>
+                    <li>Sponsorship of Specific Animals</li>
+                </ul>
+            </div>
+            
+            <form id="donationForm" action="YOUR_SERVER_URL" method="POST" class="donate-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="amount">Donation Amount:</label>
+                <input type="number" id="amount" name="amount" placeholder="Amount in INR" required>
+
+                <label for="donationType">Donation Type:</label>
+                <select id="donationType" name="donationType" required>
+                    <option value="one-time">One-Time Donation</option>
+                    <option value="monthly">Monthly Contribution</option>
+                    <option value="sponsorship">Sponsorship</option>
+                </select>
+
+                <label for="message">Message (Optional):</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+
+                <button type="submit" class="btn">Donate Now</button>
+                <div id="formFeedback" class="feedback"></div>
+                <div id="thankYouMessage" class="thank-you-message">Thank you for your generous donation!</div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Animal Angels. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function(event) {
+            // Prevent form from submitting immediately
+            event.preventDefault();
+            
+            // Validate form
+            let valid = true;
+            const feedback = document.getElementById('formFeedback');
+            feedback.textContent = '';
+
+            // Check Name
+            const name = document.getElementById('name').value.trim();
+            if (!name) {
+                feedback.textContent += 'Please enter your name.\n';
+                valid = false;
+            }
+
+            // Check Email
+            const email = document.getElementById('email').value.trim();
+            if (!email || !email.includes('@')) {
+                feedback.textContent += 'Please enter a valid email address.\n';
+                valid = false;
+            }
+
+            // Check Amount
+            const amount = document.getElementById('amount').value.trim();
+            if (!amount || isNaN(amount) || amount <= 0) {
+                feedback.textContent += 'Please enter a valid donation amount.\n';
+                valid = false;
+            }
+
+            // Check Donation Type
+            const donationType = document.getElementById('donationType').value;
+            if (!donationType) {
+                feedback.textContent += 'Please select a donation type.\n';
+                valid = false;
+            }
+
+            if (valid) {
+                // Display thank you message
+                const thankYouMessage = document.getElementById('thankYouMessage');
+                thankYouMessage.style.display = 'block';
+
+                // Clear form fields
+                document.getElementById('donationForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>
